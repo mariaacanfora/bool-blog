@@ -2,7 +2,7 @@
 
 @section('title', "Dettagli post: " . $post->title)
     
-@section('content')
+@section('main_content')
 {{-- <div class="container mt-5">
     <div class="row">
         <div class="col-lg-8"> --}}
@@ -23,7 +23,7 @@
                             <form action="{{route("posts.destroy", $post->id)}}" method="post" class="form-delete">
                                 @csrf
                                 @method("delete")
-                                
+
 
                                 <button type="submit" class="btn btn-danger">Elimina</button>
                             </form>
