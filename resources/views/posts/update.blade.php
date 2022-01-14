@@ -1,20 +1,21 @@
 @extends('layouts.default')
 
-@section('title', 'Creazione di un nuovo post')
+@section('title', 'Aggiornamento post')
 
 @section('page_header')
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5">
-            <h1 class="fw-bolder">Creazione nuovo post</h1>
+            <h1 class="fw-bolder">Aggiornamento post</h1>
         </div>
     </div>
 </header>
 @endsection
 
 @section('main_content')
-    <form action="{{route('posts.store')}}" method="POST">
+    <form action="{{route('posts.update', $post->id)}}" method="POST">
         @csrf
+        @method('put')
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
             <input type="text" class="form-control" id="title" name="title">
@@ -46,7 +47,7 @@
         </div>
 
         <div class="text-center mb-5">
-            <button class="btn btn-success" type="submit">Crea</button>
+            <button class="btn btn-success" type="submit">Aggiorna</button>
         </div>       
     </form>
 
