@@ -33,7 +33,7 @@
                     
                 </header>
                 <!-- Preview image figure-->
-                <figure class="mb-4"><img class="img-fluid rounded" src="{{post->coverImg}}" alt="..." /></figure>
+                <figure class="mb-4"><img class="img-fluid rounded" src="{{$post->coverImg}}" alt="..." /></figure>
                 <!-- Post content-->
                 <section class="mb-5">
                     {{$post->content}}
