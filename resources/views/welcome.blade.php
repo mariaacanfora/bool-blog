@@ -15,4 +15,10 @@
 
 @section('main_content')
     <h1>Benvenuto sul blog di Boolean</h1>
+
+    @foreach($posts as $post)
+        <p>{{$post->title}}</p>
+    @endforeach
+
+    
 @endsection
